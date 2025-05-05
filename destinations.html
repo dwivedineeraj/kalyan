@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Trekking Guide Team Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Reusing Header Structure -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="https://placehold.co/150x50?text=Logo" alt="Logo Placeholder"></a>
+            </div>
+            <nav>
+                 <ul>
+                    <li class="dropdown">
+                        <a href="destinations.html">Destinations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Nepal</a></li>
+                            <li><a href="#">Bhutan</a></li>
+                            <li><a href="#">Tibet</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="trekking-nepal.html">Trekking in Nepal</a>
+                         <ul class="dropdown-menu">
+                            <li><a href="#">Everest Region</a></li>
+                            <li><a href="#">Annapurna Region</a></li>
+                            <li><a href="#">Langtang Region</a></li>
+                            <li><a href="#">Dolpo Region</a></li>
+                            <li><a href="#">Special Routes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+             <div class="header-contact">
+                <span>Talk to Kabiraj: +977 9851229400</span>
+                <span>Talk to Sujan: +977 9841035868</span>
+                <button>Plan Your Trip</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-title">
+        <div class="container">
+            <h1>Our Destinations</h1>
+        </div>
+    </section>
+
+    <section class="destination-list">
+        <div class="container">
+            <div class="destination-item">
+                <img src="https://placehold.co/400x250?text=Nepal+Image" alt="Nepal Placeholder">
+                <h2>Nepal</h2>
+                <p>Explore the Himalayas: Trekking, Expeditions, Tours, Peak Climbing, Jungle Safari, and more.</p>
+                <a href="#" class="details-btn">Explore Nepal</a> <!-- Link to specific Nepal page later -->
+            </div>
+            <div class="destination-item">
+                <img src="https://placehold.co/400x250?text=Bhutan+Image" alt="Bhutan Placeholder">
+                <h2>Bhutan</h2>
+                <p>Discover the Land of the Thunder Dragon: Unique Tours and Cultural Experiences.</p>
+                <a href="#" class="details-btn">Explore Bhutan</a> <!-- Link to specific Bhutan page later -->
+            </div>
+            <div class="destination-item">
+                 <img src="https://placehold.co/400x250?text=Tibet+Image" alt="Tibet Placeholder">
+                 <h2>Tibet</h2>
+                 <p>Journey to the Roof of the World: Tours, Trekking, and Expeditions.</p>
+                 <a href="#" class="details-btn">Explore Tibet</a> <!-- Link to specific Tibet page later -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reusing Footer Structure -->
+    <footer>
+         <div class="container">
+            <div class="footer-contact">
+                <h4>Trekking Guide Team Adventure Pvt. Ltd</h4>
+                <p>Government Regd. No. 108768/069/070, Tourism License: 1574</p>
+                <p>Puskar Hotel (Third Floor), Nursingh Chwok, Thamel, Kathmandu, Nepal</p>
+                <p>info@nepalguidetrekking.com</p>
+                <p>+977 -1 5318807 (Office)</p>
+                <p>+977 9851229400 (Kabiraj)</p>
+            </div>
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="trekking-nepal.html">Trekking in Nepal</a></li>
+                    <li><a href="#">Company</a></li> <!-- Keep or remove as needed -->
+                    <li><a href="#">Blogs</a></li>   <!-- Keep or remove as needed -->
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FAQs</a></li>
+                     <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Social Media</h4>
+                 <a href="#"><img src="https://placehold.co/30x30?text=FB" alt="Facebook"></a>
+                 <a href="#"><img src="https://placehold.co/30x30?text=IG" alt="Instagram"></a>
+                 <a href="#"><img src="https://placehold.co/30x30?text=TW" alt="Twitter"></a>
+            </div>
+             <div class="footer-payment">
+                <h4>We accept</h4>
+                 <img src="https://placehold.co/150x40?text=Payment+Methods" alt="Payment Methods">
+             </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025, Trekking Guide Team Adventure Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        /* Basic styles for destination list - can move to style.css */
+        .page-title {
+            background-color: #f1f1f1;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .destination-list .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .destination-item {
+            flex-basis: calc(33.333% - 30px);
+            border: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+         .destination-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .destination-item h2 {
+            margin-bottom: 10px;
+        }
+        .destination-item p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+         @media (max-width: 992px) {
+            .destination-item {
+                flex-basis: calc(50% - 30px);
+            }
+        }
+          @media (max-width: 768px) {
+            .destination-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</body>
+</html> 

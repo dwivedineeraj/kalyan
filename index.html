@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trekking Guide Team Adventure - Replica</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom styles for dropdown hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-menu li a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-menu li a:hover {background-color: #f1f1f1;}
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="logo flex-shrink-0">
+                    <a href="index.html"><img src="logo.png" alt="Logo" class="h-10 sm:h-12"></a>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <div class="dropdown relative">
+                        <a href="#" class="text-gray-600 hover:text-gray-900 py-2 px-3 rounded-md text-sm font-medium">Everest Region <i class="fas fa-chevron-down text-xs"></i></a>
+                        <ul class="dropdown-menu mt-2 py-1 rounded-md shadow-lg w-48">
+                            <li><a href="trek-details.html" class="text-sm">Gokyo Lake Trekking - 15 Days</a></li>
+                            <li><a href="trek-details.html" class="text-sm">Pikey Peak Trekking - 9 Days</a></li>
+                            <li><a href="trek-details.html" class="text-sm">Everest Base Camp Heli Trip - 7 Days</a></li>
+                            <li><a href="trek-details.html" class="text-sm">Everest Base Camp Trek - 15 Days</a></li>
+                            <li><a href="trek-details.html" class="text-sm">Everest View Trek - 8 Days</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown relative">
+                        <a href="#" class="text-gray-600 hover:text-gray-900 py-2 px-3 rounded-md text-sm font-medium">Annapurna Region <i class="fas fa-chevron-down text-xs"></i></a>
+                        <ul class="dropdown-menu mt-2 py-1 rounded-md shadow-lg w-56">
+                             <li><a href="trek-details.html" class="text-sm">Annapurna Base Camp & Mardi Himal - 10 Days</a></li>
+                             <li><a href="trek-details.html" class="text-sm">Annapurna Base Camp Trek - 5 Days</a></li>
+                             <li><a href="trek-details.html" class="text-sm">Poon Hill With Mardi Himal Trek</a></li>
+                             <li><a href="trek-details.html" class="text-sm">Annapurna Base Camp Trekking - 10 Days</a></li>
+                        </ul>
+                    </div>
+                     <div class="dropdown relative">
+                        <a href="#" class="text-gray-600 hover:text-gray-900 py-2 px-3 rounded-md text-sm font-medium">Langtang Region <i class="fas fa-chevron-down text-xs"></i></a>
+                        <ul class="dropdown-menu mt-2 py-1 rounded-md shadow-lg w-60">
+                            <li><a href="trek-details.html" class="text-sm">Ganesh Himal Trek (Ruby Valley) - 15 Days</a></li>
+                            <li><a href="trek-details.html" class="text-sm">Langtang Valley Trekking - 12 Days</a></li>
+                             <li><a href="trek-details.html" class="text-sm">Helambu Cultural Trekking - 10 Days</a></li>
+                             <li><a href="trek-details.html" class="text-sm">Langtang Valley Trek - 9 Days</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown relative">
+                         <a href="#" class="text-gray-600 hover:text-gray-900 py-2 px-3 rounded-md text-sm font-medium">Special Routes <i class="fas fa-chevron-down text-xs"></i></a>
+                         <ul class="dropdown-menu mt-2 py-1 rounded-md shadow-lg w-60">
+                             <li><a href="trek-details.html" class="text-sm">Manaslu Trekking 16 Days</a></li>
+                             <li><a href="trek-details.html" class="text-sm">Tsum Valley Manaslu Circuit Trek - 21 Days</a></li>
+                             <li><a href="trek-details.html" class="text-sm">Kanchenjunga Expedition - 65 Days</a></li>
+                         </ul>
+                    </div>
+                    <a href="contact.html" class="text-gray-600 hover:text-gray-900 py-2 px-3 rounded-md text-sm font-medium">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                     <div class="text-right text-xs">
+                         <div>Talk to Kalyan:</div>
+                        <div class="font-semibold">+977XXXXXXXXXX</div>
+                    </div>
+                    <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow">Plan Your Trip</a>
+                </div>
+                 <!-- Mobile Menu Button -->
+                 <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                 </div>
+            </div>
+             <!-- Mobile Menu (hidden by default) -->
+             <div id="mobile-menu" class="md:hidden hidden">
+                <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                     <a href="#" class="block text-gray-600 hover:bg-gray-100 hover:text-gray-900 py-2 px-3 rounded-md text-base font-medium">Everest Region</a>
+                     <!-- Add other regions and contact for mobile -->
+                     <a href="#" class="block text-gray-600 hover:bg-gray-100 hover:text-gray-900 py-2 px-3 rounded-md text-base font-medium">Annapurna Region</a>
+                     <a href="#" class="block text-gray-600 hover:bg-gray-100 hover:text-gray-900 py-2 px-3 rounded-md text-base font-medium">Langtang Region</a>
+                     <a href="#" class="block text-gray-600 hover:bg-gray-100 hover:text-gray-900 py-2 px-3 rounded-md text-base font-medium">Special Routes</a>
+                     <a href="contact.html" class="block text-gray-600 hover:bg-gray-100 hover:text-gray-900 py-2 px-3 rounded-md text-base font-medium">Contact</a>
+                     <div class="border-t border-gray-200 pt-4 mt-4">
+                        <div class="text-sm px-3">Talk to Kalyan:</div>
+                        <div class="font-semibold text-sm px-3 mb-3">+977XXXXXXXXXX</div>
+                        <a href="#" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-base font-medium shadow">Plan Your Trip</a>
+                    </div>
+                 </nav>
+             </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-cover bg-center text-white py-24 px-4" style="background-image: url('pike-peak-village-1.webp');">
+        <div class="container mx-auto text-center bg-black bg-opacity-50 p-8 rounded-lg">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Experience Nepal; Experience Himalayas</h1>
+            <p class="text-lg md:text-xl mb-8">Your adventure starts here. Explore the best treks and tours.</p>
+            <form action="#" method="get" class="max-w-xl mx-auto">
+                <div class="flex items-center border border-gray-300 rounded-md overflow-hidden shadow-sm">
+                    <input type="text" placeholder="Search your Trip ..." class="w-full px-4 py-3 text-gray-900 focus:outline-none">
+                    <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 font-semibold">Search</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+     <!-- Why Book With Us Section (Example based on common patterns) -->
+     <section class="why-book py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why you should book with us?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="feature-item">
+                    <div class="mb-4 text-orange-500"><i class="fas fa-users fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Guided by Locals</h3>
+                    <p class="text-gray-600">Discover hidden gems, cultural insight, and insider guides.</p>
+                </div>
+                <div class="feature-item">
+                     <div class="mb-4 text-orange-500"><i class="fas fa-tags fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Best Price Guarantee</h3>
+                    <p class="text-gray-600">Top-notch value, ensuring a thrilling and affordable adventure.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="mb-4 text-orange-500"><i class="fas fa-calendar-check fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Flexible Booking</h3>
+                    <p class="text-gray-600">Peace of mind when planning trips in advance or making schedules.</p>
+                </div>
+                <div class="feature-item">
+                     <div class="mb-4 text-orange-500"><i class="fas fa-headset fa-3x"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Customer Service</h3>
+                    <p class="text-gray-600">Passionate and experienced travel expert team here for you anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section id="best-sellers" class="best-sellers py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Best Sellers</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Example Trip Card 1 -->
+                <div class="trip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="pike-peak-village-1.webp" alt="Annapurna Base Camp" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-2 py-1 rounded-full mb-2"><i class="far fa-clock mr-1"></i>10 Days</span>
+                        <h4 class="text-lg font-semibold mb-1 hover:text-orange-600"><a href="trek-details.html">Annapurna Base Camp Trekking - 10 Days</a></h4>
+                        <p class="text-sm text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-1"></i>Annapurna</p>
+                        <div class="flex justify-between items-center">
+                             <a href="trek-details.html" class="text-sm text-white bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded-md">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Trip Card 2 -->
+                <div class="trip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="pike-peak-village-1.webp" alt="Everest Base Camp" class="w-full h-48 object-cover">
+                     <div class="p-4">
+                        <span class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-2 py-1 rounded-full mb-2"><i class="far fa-clock mr-1"></i>13 Days</span>
+                        <h4 class="text-lg font-semibold mb-1 hover:text-orange-600"><a href="trek-details.html">Everest Base Camp and Kala Patthar Trek 13 days</a></h4>
+                        <p class="text-sm text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-1"></i>Everest Base Camp</p>
+                        <div class="flex justify-between items-center">
+                            <a href="trek-details.html" class="text-sm text-white bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded-md">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Trip Card 3 -->
+                 <div class="trip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="pike-peak-village-1.webp" alt="Everest Chola Pass" class="w-full h-48 object-cover">
+                     <div class="p-4">
+                        <span class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-2 py-1 rounded-full mb-2"><i class="far fa-clock mr-1"></i>16 Days</span>
+                        <h4 class="text-lg font-semibold mb-1 hover:text-orange-600"><a href="trek-details.html">Everest Base Camp, Cho-La Pass and Gokyo Trek - 16 Days</a></h4>
+                        <p class="text-sm text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-1"></i>Everest</p>
+                        <div class="flex justify-between items-center">
+                            <a href="trek-details.html" class="text-sm text-white bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded-md">Details</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Example Trip Card 4 -->
+                 <div class="trip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="pike-peak-village-1.webp" alt="Langtang Valley" class="w-full h-48 object-cover">
+                     <div class="p-4">
+                        <span class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-2 py-1 rounded-full mb-2"><i class="far fa-clock mr-1"></i>9 Days</span>
+                        <h4 class="text-lg font-semibold mb-1 hover:text-orange-600"><a href="trek-details.html">Langtang Valley Trek - 9 Days</a></h4>
+                        <p class="text-sm text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-1"></i>Langtang</p>
+                        <div class="flex justify-between items-center">
+                            <a href="trek-details.html" class="text-sm text-white bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded-md">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold border border-orange-500 px-6 py-2 rounded-md">See all Trips <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Experiences Section (Simplified) -->
+     <section class="experiences py-16 bg-white">
+         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Experiences around the Himalayas</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <!-- Example Experience Card 1 -->
+                 <div class="trip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                     <img src="pike-peak-village-1.webp" alt="Nepal Luxurious Tour" class="w-full h-48 object-cover">
+                     <div class="p-4">
+                         <span class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-2 py-1 rounded-full mb-2"><i class="far fa-clock mr-1"></i>10 Days</span>
+                         <h4 class="text-lg font-semibold mb-1 hover:text-orange-600"><a href="trek-details.html">Nepal Luxurious Tour Package - 10 Days</a></h4>
+                         <p class="text-sm text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-1"></i>Nepal</p>
+                         <div class="flex justify-between items-center">
+                             <a href="trek-details.html" class="text-sm text-white bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded-md">Details</a>
+                         </div>
+                     </div>
+                 </div>
+                  <!-- Example Experience Card 2 -->
+                 <div class="trip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                     <img src="pike-peak-village-1.webp" alt="Luxury Everest" class="w-full h-48 object-cover">
+                     <div class="p-4">
+                         <span class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-2 py-1 rounded-full mb-2"><i class="far fa-clock mr-1"></i>15 Days</span>
+                         <h4 class="text-lg font-semibold mb-1 hover:text-orange-600"><a href="trek-details.html">Luxury Everest Base Camp Trek - 15 Days</a></h4>
+                         <p class="text-sm text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-1"></i>Everest Base Camp</p>
+                         <div class="flex justify-between items-center">
+                             <a href="trek-details.html" class="text-sm text-white bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded-md">Details</a>
+                         </div>
+                     </div>
+                 </div>
+                <!-- Add more experience cards if needed -->
+              </div>
+             <div class="text-center mt-12">
+                 <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold border border-orange-500 px-6 py-2 rounded-md">See all Experiences <i class="fas fa-arrow-right ml-1"></i></a>
+             </div>
+         </div>
+     </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Happy Clients Reflect on Their Journey</h2>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                 <!-- Example Testimonial 1 -->
+                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                     <p class="text-gray-600 italic mb-4">"My first time visiting Nepal, contacted them via Email and very quick in response as well..."</p>
+                     <h4 class="font-semibold text-gray-800">Sandhu Patel - Canada</h4>
+                     <span class="text-sm text-gray-500">April 01, 2024</span>
+                 </div>
+                  <!-- Example Testimonial 2 -->
+                  <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                     <div class="text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                     <p class="text-gray-600 italic mb-4">"I am truly blessed to be born in Nepal. This place never skips a change to amaze me..."</p>
+                     <h4 class="font-semibold text-gray-800">Samrat Basnet - Nepal</h4>
+                     <span class="text-sm text-gray-500">April 01, 2024</span>
+                 </div>
+                  <!-- Example Testimonial 3 -->
+                  <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                     <p class="text-gray-600 italic mb-4">"Thank You for Kabi for arranging this Everest Kalapathhar Trek. It was tough as i expected..."</p>
+                     <h4 class="font-semibold text-gray-800">Askeen Djebka - United States</h4>
+                      <span class="text-sm text-gray-500">April 01, 2024</span>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Travel Blog from the Himalayas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                 <!-- Example Blog Post 1 -->
+                <div class="blog-post bg-white rounded-lg shadow-lg overflow-hidden">
+                     <img src="pike-peak-village-1.webp" alt="Blog Post" class="w-full h-48 object-cover">
+                     <div class="p-4">
+                        <span class="text-sm text-gray-500 mb-1 block">Dec 17, 2024 By Kalyan</span>
+                        <h4 class="text-lg font-semibold mb-2 hover:text-orange-600"><a href="trek-details.html">15 Best Places to Visit in Pokhara</a></h4>
+                        <a href="trek-details.html" class="text-sm text-orange-600 hover:text-orange-800 font-semibold">Read article <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                 <!-- Example Blog Post 2 -->
+                 <div class="blog-post bg-white rounded-lg shadow-lg overflow-hidden">
+                     <img src="pike-peak-village-1.webp" alt="Blog Post" class="w-full h-48 object-cover">
+                      <div class="p-4">
+                        <span class="text-sm text-gray-500 mb-1 block">Dec 15, 2024 By Kalyan</span>
+                        <h4 class="text-lg font-semibold mb-2 hover:text-orange-600"><a href="trek-details.html">Holiday Package for Christmas and New Year 2025</a></h4>
+                         <a href="trek-details.html" class="text-sm text-orange-600 hover:text-orange-800 font-semibold">Read article <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                 <!-- Example Blog Post 3 -->
+                 <div class="blog-post bg-white rounded-lg shadow-lg overflow-hidden">
+                     <img src="pike-peak-village-1.webp" alt="Blog Post" class="w-full h-48 object-cover">
+                     <div class="p-4">
+                        <span class="text-sm text-gray-500 mb-1 block">Nov 12, 2024 By Kalyan</span>
+                        <h4 class="text-lg font-semibold mb-2 hover:text-orange-600"><a href="trek-details.html">Everything you need to know about "Tsum Valley Trek"</a></h4>
+                        <a href="trek-details.html" class="text-sm text-orange-600 hover:text-orange-800 font-semibold">Read article <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+             <div class="text-center mt-12">
+                <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold border border-orange-500 px-6 py-2 rounded-md">See all Articles <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">FAQs by Travelers</h2>
+            <div class="space-y-4">
+                 <!-- Example FAQ 1 -->
+                 <details class="bg-white p-4 rounded-lg shadow group">
+                    <summary class="font-semibold text-gray-700 cursor-pointer list-none flex justify-between items-center">
+                        How can I get On Arrival Visa?
+                         <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">Visit the link for detailed information Click here to Visit Visa on Arrival Page (Link not implemented).</p>
+                 </details>
+                 <!-- Example FAQ 2 -->
+                  <details class="bg-white p-4 rounded-lg shadow group">
+                    <summary class="font-semibold text-gray-700 cursor-pointer list-none flex justify-between items-center">
+                       What are the different kinds of On Arrival Visa?
+                         <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">All 'On Arrival Visas' are Tourist Visas. They have different durations (15, 30, 90 days).</p>
+                 </details>
+                  <!-- Example FAQ 3 -->
+                 <details class="bg-white p-4 rounded-lg shadow group">
+                    <summary class="font-semibold text-gray-700 cursor-pointer list-none flex justify-between items-center">
+                        I need Tourist Visa with Multiple Re entry facility. What can I do?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">Multi-entry visas can be obtained from Nepalese diplomatic missions abroad or may be granted by the Department of Immigration in Nepal upon request and justification.</p>
+                 </details>
+            </div>
+             <div class="text-center mt-8">
+                 <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold">More FAQs <i class="fas fa-external-link-alt ml-1"></i></a>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 pt-12 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Footer Contact -->
+            <div class="footer-contact">
+                <h4 class="text-lg font-semibold text-white mb-4">Trekking Guide Team Adventure</h4>
+                <p class="text-sm mb-1">Govt. Regd. No. 108768/069/070</p>
+                 <p class="text-sm mb-1">Tourism License: 1574</p>
+                <p class="text-sm mb-1"><i class="fas fa-map-marker-alt mr-2"></i>Puskar Hotel (Third Floor), Thamel, Kathmandu</p>
+                <p class="text-sm mb-1"><i class="fas fa-phone-alt mr-2"></i>+977 -1 5318807 (Office)</p>
+                <p class="text-sm mb-1"><i class="fas fa-mobile-alt mr-2"></i>+977XXXXXXXXXX (Kalyan)</p>
+            </div>
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <h4 class="text-lg font-semibold text-white mb-4">Useful Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white text-sm">Destinations (Regions)</a></li>
+                    <li><a href="#" class="hover:text-white text-sm">Travel Guides</a></li>
+                    <li><a href="#" class="hover:text-white text-sm">Company</a></li>
+                    <li><a href="#" class="hover:text-white text-sm">Blogs</a></li>
+                    <li><a href="contact.html" class="hover:text-white text-sm">Contact</a></li>
+                    <li><a href="#" class="hover:text-white text-sm">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Footer Social -->
+            <div class="footer-social">
+                <h4 class="text-lg font-semibold text-white mb-4">Social Media</h4>
+                <div class="flex space-x-3">
+                 <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                 <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                 <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                 <!-- Add other relevant social icons -->
+                </div>
+                 <h4 class="text-lg font-semibold text-white mt-6 mb-4">We Accept</h4>
+                  <img src="logo.png" alt="Payment Methods" class="h-6 bg-white p-1 rounded"> <!-- Placeholder -->
+            </div>
+             <!-- Footer Association (Placeholder) -->
+             <div class="footer-associations">
+                 <h4 class="text-lg font-semibold text-white mb-4">Associated With</h4>
+                 <div class="flex flex-wrap gap-2">
+                     <span class="bg-gray-700 px-2 py-1 text-xs rounded">Nepal Gov</span>
+                     <span class="bg-gray-700 px-2 py-1 text-xs rounded">NTB</span>
+                     <span class="bg-gray-700 px-2 py-1 text-xs rounded">TAAN</span>
+                     <span class="bg-gray-700 px-2 py-1 text-xs rounded">KEEP</span>
+                 </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+            <p>&copy; 2025, Trekking Guide Team Adventure Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple Mobile Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html> 

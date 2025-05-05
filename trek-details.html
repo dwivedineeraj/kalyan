@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trek Details - Pikey Peak Trekking - 9 Days</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom styles for dropdown hover (can be shared if needed) */
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu { display: none; position: absolute; background-color: white; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+        .dropdown-menu li a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
+        .dropdown-menu li a:hover { background-color: #f1f1f1; }
+        /* Custom styles for trek details page */
+        .trek-content h2 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        .trek-content h3 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            margin-top: 1rem; /* mt-4 */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+         .trek-content ul {
+            list-style: disc;
+            margin-left: 1.5rem; /* ml-6 */
+             margin-bottom: 1rem; /* mb-4 */
+            padding-left: 0.5rem; /* pl-2 */
+        }
+        .trek-content li {
+             margin-bottom: 0.5rem; /* mb-2 */
+        }
+        .trek-content p {
+             margin-bottom: 1rem; /* mb-4 */
+            line-height: 1.6; /* leading-relaxed */
+        }
+         .sidebar > div {
+            background-color: white;
+            padding: 1.5rem; /* p-6 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-md */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header (Simplified for details page, or reuse from index) -->
+     <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="logo flex-shrink-0">
+                    <a href="index.html"><img src="logo.png" alt="Logo" class="h-10 sm:h-12"></a>
+                </div>
+                 <nav class="hidden md:flex space-x-6">
+                     <a href="index.html" class="text-gray-600 hover:text-gray-900 py-2 px-3 rounded-md text-sm font-medium">Home</a>
+                     <a href="#" class="text-gray-600 hover:text-gray-900 py-2 px-3 rounded-md text-sm font-medium">All Treks</a> <!-- Example Link -->
+                     <a href="contact.html" class="text-gray-600 hover:text-gray-900 py-2 px-3 rounded-md text-sm font-medium">Contact</a>
+                 </nav>
+                 <div class="hidden md:flex items-center space-x-4">
+                      <div class="text-right text-xs">
+                          <div>Talk to Kalyan:</div>
+                         <div class="font-semibold">+977XXXXXXXXXX</div>
+                     </div>
+                     <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow">Plan Your Trip</a>
+                 </div>
+                 <!-- Mobile Menu Button (Optional for details) -->
+                 <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                 </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section for Trek Details -->
+    <section class="trek-details-hero bg-gray-700 text-white py-10 px-4">
+        <div class="container mx-auto">
+            <!-- Breadcrumbs (Example) -->
+             <nav class="text-sm mb-4">
+                <a href="index.html" class="hover:text-orange-300">Home</a> >
+                 <a href="#" class="hover:text-orange-300">Everest Region</a> >
+                 <span class="text-gray-400">Pikey Peak Trekking</span>
+             </nav>
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Pikey Peak Trekking - 9 Days</h1>
+            <!-- Optional: Add rating / short info here -->
+             <div class="flex items-center space-x-4 text-sm">
+                 <span><i class="fas fa-map-marker-alt mr-1 text-orange-400"></i>Solukhumbu Region</span>
+                 <span><i class="fas fa-clock mr-1 text-orange-400"></i>9 Days</span>
+                 <span><i class="fas fa-mountain mr-1 text-orange-400"></i>Max Alt: 4,065m</span>
+                 <span><i class="fas fa-hiking mr-1 text-orange-400"></i>Grade: Moderate</span>
+                 <!-- Add Reviews/Stars if applicable -->
+                <span class="text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (Based on reviews)</span>
+             </div>
+        </div>
+    </section>
+
+    <!-- Main Content & Sidebar -->
+    <section class="trek-content container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="md:grid md:grid-cols-3 md:gap-8 lg:gap-12">
+
+            <!-- Main Content Area -->
+            <div class="main-content md:col-span-2">
+                <h2>Trip Overview</h2>
+                <p>Pikey Peak Trekking is a newly discovered route in the lower Everest region, famed for offering perhaps the best viewpoint of Mount Everest in Nepal, as acclaimed by Sir Edmund Hillary himself. This 9-day trek presents a unique opportunity to witness breathtaking sunrises and sunsets over the Himalayan giants, including Everest, Makalu, Kanchenjunga, Annapurna, and Dhaulagiri, from the summit of Pikey Peak (4,065m). Unlike the more crowded trails to Everest Base Camp, the Pikey Peak trek meanders through serene landscapes, traditional Sherpa villages, ancient monasteries, and lush rhododendron forests, providing an authentic cultural experience and stunning natural beauty away from the main tourist throngs.</p>
+                <p>Ideal for those with limited time or seeking a less strenuous alternative to high-altitude treks, the Pikey Peak journey combines moderate hiking with unparalleled panoramic views. The trek is accessible, requiring no prior trekking experience, and offers comfortable teahouse accommodation along the way. Experience the tranquility of the lower Khumbu, interact with friendly locals, and capture unforgettable Himalayan vistas on this rewarding adventure.</p>
+
+                <!-- Image Gallery -->
+                 <div class="trip-gallery my-6">
+                     <h2>Trip Gallery</h2>
+                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <a href="pike-peak-village-1.webp" data-lightbox="gallery"> <!-- Example Lightbox integration -->
+                             <img src="pike-peak-village-1.webp" alt="Pikey Peak Trek View" class="rounded-lg shadow-md hover:opacity-90 transition duration-200 w-full h-40 object-cover">
+                        </a>
+                         <a href="pike-peak-village-1.webp" data-lightbox="gallery">
+                             <img src="pike-peak-village-1.webp" alt="Pikey Peak Trek Landscape" class="rounded-lg shadow-md hover:opacity-90 transition duration-200 w-full h-40 object-cover">
+                         </a>
+                         <a href="pike-peak-village-1.webp" data-lightbox="gallery">
+                             <img src="pike-peak-village-1.webp" alt="Pikey Peak Trek Village" class="rounded-lg shadow-md hover:opacity-90 transition duration-200 w-full h-40 object-cover">
+                         </a>
+                          <a href="pike-peak-village-1.webp" data-lightbox="gallery">
+                             <img src="pike-peak-village-1.webp" alt="Pikey Peak Monk" class="rounded-lg shadow-md hover:opacity-90 transition duration-200 w-full h-40 object-cover">
+                         </a>
+                         <a href="pike-peak-village-1.webp" data-lightbox="gallery">
+                            <img src="pike-peak-village-1.webp" alt="Pikey Peak Trail" class="rounded-lg shadow-md hover:opacity-90 transition duration-200 w-full h-40 object-cover">
+                        </a>
+                         <a href="pike-peak-village-1.webp" data-lightbox="gallery">
+                            <img src="pike-peak-village-1.webp" alt="Pikey Peak Prayer Flags" class="rounded-lg shadow-md hover:opacity-90 transition duration-200 w-full h-40 object-cover">
+                        </a>
+                     </div>
+                      <!-- Note: Actual lightbox functionality requires a JS library like Lightbox2 or similar -->
+                 </div>
+
+                <h2>Highlights</h2>
+                <ul>
+                    <li>Ascend Pikey Peak (4,065m) for arguably the best panoramic views of Everest and surrounding peaks.</li>
+                     <li>Witness spectacular sunrise and sunset views over the Himalayas, including 8 of the 14 highest mountains.</li>
+                    <li>Explore authentic Sherpa culture, visiting traditional villages and ancient monasteries like Thubtenchoeling.</li>
+                    <li>Trek through diverse landscapes: lush forests, terraced fields, alpine meadows.</li>
+                    <li>Enjoy a less crowded, off-the-beaten-path trekking experience.</li>
+                    <li>Suitable for beginners and families with good fitness.</li>
+                    <li>Avoids the Lukla flight, utilizes scenic drives.</li>
+                </ul>
+
+                 <!-- Detailed Itinerary using details/summary -->
+                <h2>Detailed Itinerary</h2>
+                <div class="space-y-3">
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             <span>Day 01: Arrival in Kathmandu (1,400 m) & Transfer to Hotel</span>
+                             <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                         <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Upon arrival, transfer to your hotel. Briefing about the trek in the evening. Overnight in Kathmandu.</p>
+                    </details>
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             <span>Day 02: Drive Kathmandu to Dhap (2,900 m)</span> <span class="text-xs font-normal text-gray-500 ml-2">(7-8 hrs drive)</span>
+                             <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Scenic drive through hills and river valleys to reach Dhap. Overnight at a teahouse.</p>
+                    </details>
+                     <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                            <span>Day 03: Trek Dhap to Jhapre (2,920 m)</span> <span class="text-xs font-normal text-gray-500 ml-2">(4-5 hrs trek)</span>
+                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Trek through forests and small villages with views emerging. Visit a local monastery at Jhapre. Overnight at a teahouse.</p>
+                    </details>
+                     <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             <span>Day 04: Trek Jhapre to Pikey Base Camp (3,640 m)</span> <span class="text-xs font-normal text-gray-500 ml-2">(5-6 hrs trek)</span>
+                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Ascend towards Pikey Base Camp, passing yak pastures and stone mani walls. Enjoy growing mountain vistas. Overnight at a teahouse.</p>
+                    </details>
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             <span>Day 05: Hike to Pikey Peak (4,065 m), Trek to Loding (2,515 m)</span> <span class="text-xs font-normal text-gray-500 ml-2">(6-7 hrs trek)</span>
+                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                         <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Early morning hike to Pikey Peak for sunrise views over Everest, Makalu, Kanchenjunga, etc. Descend through forest to Loding. Overnight at a teahouse.</p>
+                    </details>
+                     <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                            <span>Day 06: Trek Loding to Junbesi (2,700 m), Visit Thubtenchoeling</span> <span class="text-xs font-normal text-gray-500 ml-2">(4-5 hrs trek)</span>
+                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                         <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Trek down to Junbesi, a traditional Sherpa village. Optional visit to the large Thubtenchoeling Monastery nearby. Overnight at a teahouse.</p>
+                    </details>
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             <span>Day 07: Explore Junbesi Village</span>
+                             <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Acclimatization or rest day. Explore the village, visit the local school, or hike to nearby viewpoints. Overnight at a teahouse.</p>
+                    </details>
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                            <span>Day 08: Trek Junbesi to Phaplu (2,470 m)</span> <span class="text-xs font-normal text-gray-500 ml-2">(3-4 hrs trek)</span>
+                             <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">A relatively short trek down to Phaplu, the district headquarters with an airstrip. Overnight at a teahouse.</p>
+                    </details>
+                     <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             <span>Day 09: Drive Phaplu to Kathmandu</span> <span class="text-xs font-normal text-gray-500 ml-2">(8-9 hrs drive)</span>
+                             <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                         <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Long drive back to Kathmandu. Farewell dinner in the evening. Overnight in Kathmandu.</p>
+                    </details>
+                 </div>
+                 <p class="text-xs text-gray-500 mt-4"><em>Note: Itinerary can be customized based on preferences and time.</em></p>
+
+                <!-- Included / Excluded -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                     <div>
+                        <h3 class="text-green-600"><i class="fas fa-check-circle mr-2"></i>What's Included</h3>
+                        <ul class="text-sm list-none ml-0 pl-0">
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>Airport pick-up and drop-off services.</span></li>
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>Hotel accommodation in Kathmandu (as per itinerary).</span></li>
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>Teahouse accommodation during the trek.</span></li>
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>All standard meals (Breakfast, Lunch, Dinner) during the trek.</span></li>
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>Licensed, experienced, English-speaking trekking guide.</span></li>
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>Porter service (1 porter for 2 trekkers).</span></li>
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>Guide and porter's insurance, salary, food, and accommodation.</span></li>
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>Ground transportation (Kathmandu-Dhap, Phaplu-Kathmandu by shared Jeep/Bus).</span></li>
+                             <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>Gaurishankar National Park entry permit and TIMS card.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 w-4 mr-2 mt-1"></i><span>All government taxes and office service charges.</span></li>
+                         </ul>
+                     </div>
+                     <div>
+                        <h3 class="text-red-600"><i class="fas fa-times-circle mr-2"></i>What's Not Included</h3>
+                        <ul class="text-sm list-none ml-0 pl-0">
+                            <li class="flex items-start"><i class="fas fa-times text-red-500 w-4 mr-2 mt-1"></i><span>Nepal visa fee.</span></li>
+                            <li class="flex items-start"><i class="fas fa-times text-red-500 w-4 mr-2 mt-1"></i><span>International airfare to and from Kathmandu.</span></li>
+                             <li class="flex items-start"><i class="fas fa-times text-red-500 w-4 mr-2 mt-1"></i><span>Meals in Kathmandu (unless specified).</span></li>
+                             <li class="flex items-start"><i class="fas fa-times text-red-500 w-4 mr-2 mt-1"></i><span>Personal expenses (alcoholic drinks, snacks, phone calls, laundry, etc.).</span></li>
+                             <li class="flex items-start"><i class="fas fa-times text-red-500 w-4 mr-2 mt-1"></i><span>Travel and rescue insurance (mandatory).</span></li>
+                            <li class="flex items-start"><i class="fas fa-times text-red-500 w-4 mr-2 mt-1"></i><span>Tips for guide and porters.</span></li>
+                            <li class="flex items-start"><i class="fas fa-times text-red-500 w-4 mr-2 mt-1"></i><span>Any extra costs due to unforeseen circumstances (e.g., landslides, delays).</span></li>
+                         </ul>
+                    </div>
+                </div>
+
+                <!-- Other Sections like Permits, Best Time, Food, Insurance, Guide -->
+                 <h2>Essential Information</h2>
+                 <h3>Permits Required</h3>
+                 <p>You will need the Gaurishankar Conservation Area Permit (GCAP) and a Trekkers' Information Management System (TIMS) card. We will obtain these permits for you as part of the package.</p>
+                <h3>Best Time to Trek</h3>
+                 <p>The best seasons are Spring (March to May) and Autumn (September to November). Spring offers blooming rhododendrons and mild weather. Autumn provides clear skies and stable conditions. Winter is cold, and monsoon brings rain and leeches.</p>
+                <h3>Accommodation and Food</h3>
+                 <p>Accommodation during the trek is in basic teahouses or lodges. Rooms are usually twin-sharing with shared bathrooms. Meals provided are typically Nepali Dal Bhat, noodles, rice dishes, soups, and basic breakfast items. You can buy snacks and drinks along the way.</p>
+                <h3>Travel Insurance</h3>
+                <p>Comprehensive travel insurance is mandatory for this trek. It must cover emergency medical evacuation (including helicopter rescue) up to at least 5000 meters, trip cancellation, and medical expenses.</p>
+                <h3>Guide and Porter</h3>
+                <p>An experienced, government-licensed guide will lead your trek, ensuring safety and providing local insights. Porters will carry your main duffel bag (limited weight, usually 10-12 kg per trekker).</p>
+
+                <!-- FAQs -->
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <div class="space-y-3">
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                            How high is Pikey Peak?
+                             <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Pikey Peak stands at 4,065 meters (13,337 feet) above sea level.</p>
+                    </details>
+                     <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             Can you see Everest from Pikey Peak?
+                             <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Yes, Pikey Peak offers one of the best panoramic views of Mount Everest and many other Himalayan giants, including Makalu, Kanchenjunga, Lhotse, Annapurna, and Dhaulagiri ranges.</p>
+                    </details>
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                            Is the Pikey Peak trek difficult?
+                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                         <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">The trek is graded as moderate. It involves daily walking of 4-7 hours on undulating trails. While it doesn't reach extreme altitudes like Everest Base Camp, a good level of basic fitness is required. The highest point is Pikey Peak itself at 4,065m.</p>
+                    </details>
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             Do I need the Lukla flight for this trek?
+                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                         <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">No, a major advantage of the Pikey Peak trek is that it avoids the often unreliable Lukla flight. You travel overland by road (typically shared jeep or bus) from Kathmandu to the trek start point (Dhap) and return from the end point (Phaplu).</p>
+                    </details>
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                            Is Pikey Peak trek suitable for beginners or families?
+                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                         </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Yes, this trek can be suitable for adventurous beginners and families with older children who have a good level of fitness and enjoy hiking. It offers incredible Himalayan views without the extreme altitude and difficulty of longer treks.</p>
+                    </details>
+                    <details class="group bg-gray-50 p-3 rounded-md">
+                        <summary class="font-medium cursor-pointer list-none flex justify-between items-center">
+                             How is the network and charging availability on the Pikey Peak route?
+                             <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-2 pl-2 border-l-2 border-orange-300">Mobile network coverage (NTC/Ncell) can be patchy, available mainly near villages but often not on the higher trails. Charging facilities are usually available at teahouses, often for a small fee.</p>
+                     </details>
+                </div>
+
+            </div>
+
+            <!-- Sidebar Area -->
+            <aside class="sidebar md:col-span-1 mt-8 md:mt-0">
+                 <!-- Expert Consultation -->
+                 <div class="contact-box text-center">
+                     <h4 class="text-lg font-semibold mb-3">Expert Consultation</h4>
+                     <!-- Optional: Add photo here -->
+                     <p class="mb-1">Talk to Kalyan</p>
+                     <p class="font-semibold text-lg text-gray-800"><i class="fab fa-whatsapp mr-1 text-green-500"></i> +977XXXXXXXXXX</p>
+                     <a href="#" class="mt-2 inline-block text-sm text-orange-600 hover:underline">Chat Now</a>
+                 </div>
+
+                <!-- Similar Packages -->
+                 <div class="similar-packages">
+                    <h4 class="text-lg font-semibold mb-4">Similar Packages</h4>
+                     <div class="space-y-4">
+                        <div class="similar-trip-card flex items-center space-x-3 border-b pb-3">
+                             <img src="pike-peak-village-1.webp" alt="Similar Trek" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+                             <div>
+                                 <h5 class="text-sm font-semibold hover:text-orange-600"><a href="trek-details.html">Everest View Trek - 8 Days</a></h5>
+                                <p class="text-xs text-gray-500"><i class="far fa-clock mr-1"></i>8 Days | Everest</p>
+                             </div>
+                         </div>
+                         <div class="similar-trip-card flex items-center space-x-3 border-b pb-3">
+                             <img src="pike-peak-village-1.webp" alt="Similar Trek" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+                             <div>
+                                <h5 class="text-sm font-semibold hover:text-orange-600"><a href="trek-details.html">Everest Base Camp Trek - 15 Days</a></h5>
+                                <p class="text-xs text-gray-500"><i class="far fa-clock mr-1"></i>15 Days | Everest</p>
+                             </div>
+                         </div>
+                         <!-- Add more similar packages -->
+                     </div>
+                     <a href="index.html#best-sellers" class="block text-center text-sm text-orange-600 hover:underline mt-4">See all Trips</a>
+                 </div>
+            </aside>
+
+        </div>
+    </section>
+
+     <!-- Footer (Reuse from index.html structure) -->
+      <footer class="bg-gray-800 text-gray-300 pt-12 pb-8">
+         <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+             <!-- Footer Contact -->
+             <div class="footer-contact">
+                 <h4 class="text-lg font-semibold text-white mb-4">Trekking Guide Team Adventure</h4>
+                 <p class="text-sm mb-1">Govt. Regd. No. 108768/069/070</p>
+                  <p class="text-sm mb-1">Tourism License: 1574</p>
+                 <p class="text-sm mb-1"><i class="fas fa-map-marker-alt mr-2"></i>Puskar Hotel (Third Floor), Thamel, Kathmandu</p>
+                 <p class="text-sm mb-1"><i class="fas fa-phone-alt mr-2"></i>+977 -1 5318807 (Office)</p>
+                 <p class="text-sm mb-1"><i class="fas fa-mobile-alt mr-2"></i>+977XXXXXXXXXX (Kalyan)</p>
+             </div>
+             <!-- Footer Links -->
+             <div class="footer-links">
+                 <h4 class="text-lg font-semibold text-white mb-4">Useful Links</h4>
+                 <ul class="space-y-2">
+                     <li><a href="#" class="hover:text-white text-sm">Everest Region</a></li>
+                     <li><a href="#" class="hover:text-white text-sm">Annapurna Region</a></li>
+                      <li><a href="index.html" class="hover:text-white text-sm">Home</a></li>
+                     <li><a href="contact.html" class="hover:text-white text-sm">Contact</a></li>
+                 </ul>
+             </div>
+             <!-- Footer Social -->
+             <div class="footer-social">
+                 <h4 class="text-lg font-semibold text-white mb-4">Social Media</h4>
+                 <div class="flex space-x-3">
+                  <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                 </div>
+                  <h4 class="text-lg font-semibold text-white mt-6 mb-4">We Accept</h4>
+                   <img src="logo.png" alt="Payment Methods" class="h-6 bg-white p-1 rounded"> <!-- Placeholder -->
+             </div>
+              <!-- Footer Association (Placeholder) -->
+              <div class="footer-associations">
+                  <h4 class="text-lg font-semibold text-white mb-4">Associated With</h4>
+                  <div class="flex flex-wrap gap-2">
+                      <span class="bg-gray-700 px-2 py-1 text-xs rounded">Nepal Gov</span>
+                      <span class="bg-gray-700 px-2 py-1 text-xs rounded">NTB</span>
+                      <span class="bg-gray-700 px-2 py-1 text-xs rounded">TAAN</span>
+                      <span class="bg-gray-700 px-2 py-1 text-xs rounded">KEEP</span>
+                  </div>
+             </div>
+         </div>
+         <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+             <p>&copy; 2025, Trekking Guide Team Adventure Pvt. Ltd. All Rights Reserved.</p>
+         </div>
+     </footer>
+
+</body>
+</html> 

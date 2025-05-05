@@ -1,0 +1,452 @@
+/* Basic Reset */
+body, h1, h2, h3, h4, p, ul, li, form, button, details, summary {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* Placeholder font */
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #f8f8f8; /* Light background for header */
+    border-bottom: 1px solid #eee;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* Match placeholder */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #007bff; /* Example link color */
+}
+
+/* Dropdown Menu Styles */
+header nav ul li.dropdown {
+    position: relative; /* Needed for absolute positioning of dropdown */
+}
+
+header nav ul li .dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    left: 0;
+    top: 100%; /* Position below the parent li */
+    background-color: #fff; /* Background for dropdown */
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 180px; /* Minimum width */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add some shadow */
+    border: 1px solid #eee;
+    z-index: 1000; /* Ensure dropdown appears above other content */
+}
+
+header nav ul li.dropdown:hover > .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+}
+
+header nav ul li .dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li .dropdown-menu li a {
+    display: block;
+    padding: 8px 15px;
+    color: #333; /* Link color inside dropdown */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-decoration: none;
+}
+
+header nav ul li .dropdown-menu li a:hover {
+    background-color: #f8f8f8; /* Hover background color */
+}
+
+header .header-contact span {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+header .header-contact button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #28a745; /* Example button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://placehold.co/1920x500?text=Hero+Background') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero form input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    margin-right: 5px;
+}
+
+.hero form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Common Section Styling */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.see-all-btn, .more-faqs-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Why Book Section */
+.why-book .features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.why-book .feature-item {
+    flex-basis: 22%; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.why-book .feature-item img {
+    margin-bottom: 10px;
+}
+
+.why-book .feature-item h3 {
+    margin-bottom: 5px;
+}
+
+/* Trip Cards (Used in Best Sellers, Experiences) */
+.trip-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between cards */
+    justify-content: center;
+}
+
+.trip-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-basis: calc(25% - 20px); /* Example: 4 cards per row, accounting for gap */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+    display: block;
+}
+
+.trip-card .trip-info {
+    padding: 15px;
+}
+
+.trip-card .duration {
+    background-color: #ffc107; /* Example color */
+    color: #333;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.trip-card h4 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.trip-card .region {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.trip-card .price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.trip-card .price del {
+    color: #999;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.trip-card .details-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Testimonials */
+.testimonials .testimonial-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonials .testimonial-card {
+    flex-basis: calc(33% - 20px); /* Example: 3 cards per row */
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.testimonials .testimonial-card p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonials .testimonial-card h4 {
+    margin-bottom: 5px;
+}
+
+.testimonials .testimonial-card span {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Blog */
+.blog .blog-posts {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.blog .blog-post {
+     border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-basis: calc(33% - 20px); /* Example: 3 posts per row */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog .blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.blog .post-info {
+    padding: 15px;
+}
+
+.blog .post-info span {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.blog .post-info h4 {
+    margin-bottom: 10px;
+}
+
+.blog .post-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FAQs */
+.faqs .faq-list details {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.faqs .faq-list summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; /* Remove default marker */
+}
+
+.faqs .faq-list summary::-webkit-details-marker { display: none; }
+
+.faqs .faq-list summary::after {
+    content: '+'; /* Simple indicator */
+    float: right;
+}
+
+.faqs .faq-list details[open] summary::after {
+    content: '-';
+}
+
+.faqs .faq-list p {
+    padding-top: 10px;
+    margin-left: 10px; /* Indent answer */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark footer */
+    color: #f8f9fa;
+    padding-top: 30px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+    color: #ffc107; /* Example accent color */
+}
+
+footer p, footer li {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+footer .footer-links ul {
+    list-style: none;
+}
+
+footer .footer-links a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-social img {
+    margin-right: 10px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 1px solid #495057;
+    font-size: 0.8em;
+}
+
+/* Basic Responsiveness (Example) */
+@media (max-width: 992px) {
+    .trip-card,
+    .testimonials .testimonial-card,
+    .blog .blog-post {
+        flex-basis: calc(50% - 20px); /* 2 cards/posts per row */
+    }
+    .why-book .feature-item {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav ul {
+       flex-direction: column;
+       margin-top: 10px;
+    }
+     header nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    header .header-contact {
+        margin-top: 15px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .trip-card,
+    .testimonials .testimonial-card,
+    .blog .blog-post,
+    .why-book .feature-item {
+        flex-basis: 100%; /* 1 card/post per row */
+    }
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer > div {
+        margin-bottom: 20px;
+    }
+} 
